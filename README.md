@@ -1,10 +1,10 @@
 # Full Digits Detection App
 
-A full-stack web application that classifies digits from user input. Users can provide an image and the app predicts the corresponding digit using a machine learning model.
+A full-stack web application that classifies digits from user input. Users writes on canvas and the app predicts the corresponding digit using a machine learning model.
 
 ### ⚡ Testing with 8×8 Grayscale Matrices
 
-Currently, the app accepts **image input only**. During testing, we also tried providing **8×8 grayscale matrices** as input.
+Currently, the app accepts **canvas drawings**. During testing, we also tried providing **8×8 grayscale matrices** as input.
 
 - The ML model itself achieves **>89% accuracy** on the dataset.
 - Prediction errors occur in the app due to **mismatch between the frontend grayscale mapping and the format expected by the model**.
@@ -14,7 +14,7 @@ Currently, the app accepts **image input only**. During testing, we also tried p
 
 ## 🚀 Features
 
-- Input via image upload
+- Input via canvas drawing
 - Real-time digit classification using a trained ML model
 - Clean and interactive frontend interface
 - Backend API handles preprocessing and model inference
