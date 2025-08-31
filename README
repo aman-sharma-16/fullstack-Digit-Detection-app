@@ -10,7 +10,7 @@ Currently, the app accepts **image input only**. During testing, we also tried p
 - Prediction errors occur in the app due to **mismatch between the frontend grayscale mapping and the format expected by the model**.
 - Proper scaling and preprocessing of matrix inputs will enable accurate predictions, extending the app beyond image uploads.
 
-> Note: The model is highly accurate, but input preprocessing differences are the main source of errors when using 8×8 matrices.You can manually use the model with 8x8 grayscale image giving in the repo.
+> Note: The model is highly accurate, but input preprocessing differences are the main source of errors when using 8×8 matrices. You can manually use the model with 8×8 grayscale input provided in the repo.
 
 ## 🚀 Features
 
@@ -30,15 +30,22 @@ Currently, the app accepts **image input only**. During testing, we also tried p
 
 ### Backend
 
-- Node.js / Express (or FastAPI)
-- Python ML model (Developed from scratch)
-- JSON API for prediction requests
+- Python 3.11+ with FastAPI
+- Machine learning model developed from scratch
+- Uvicorn for running the server
 
 ### Database
 
-- Optional (depending on app design, e.g., MongoDB or PostgreSQL)
+- Optional (e.g., MongoDB or PostgreSQL)
 
 ## 📦 Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/full-digits-detection-app.git
+cd full-digits-detection-app
+
 
 git clone https://github.com/your-username/full-digits-detection-app.git
 cd full-digits-detection-app
@@ -63,3 +70,4 @@ cd client # for client
 npm run dev
 
 uvicorn app.main:app --reload # for server
+```
