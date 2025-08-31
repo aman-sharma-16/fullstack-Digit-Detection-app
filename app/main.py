@@ -1,7 +1,6 @@
-from fastapi import FastAPI, Response, status
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from classifierModel import predict
-import numpy as np
 from .schemas import userImageInput
 
 app = FastAPI()

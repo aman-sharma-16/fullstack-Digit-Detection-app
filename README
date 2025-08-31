@@ -1,19 +1,65 @@
-# Overview
+# Full Digits Detection App
 
-The dataset used for the project is from sklearn's "Handwritten Digits Dataset".
+A full-stack web application that classifies digits from user input. Users can provide an image and the app predicts the corresponding digit using a machine learning model.
 
-The backend is created using the fastapi.
+### ⚡ Testing with 8×8 Grayscale Matrices
 
-The frontend is built using the vite + react + ts + tailwind.
+Currently, the app accepts **image input only**. During testing, we also tried providing **8×8 grayscale matrices** as input.
 
-The images given as input other than sample images must be 8x8 pixel in shape as the predicting model takes only 8x8 sized images,so do remember to resize the image yourself before feeding it to the application.
+- The ML model itself achieves **>89% accuracy** on the dataset.
+- Prediction errors occur in the app due to **mismatch between the frontend grayscale mapping and the format expected by the model**.
+- Proper scaling and preprocessing of matrix inputs will enable accurate predictions, extending the app beyond image uploads.
 
-# Folders' description
+> Note: The model is highly accurate, but input preprocessing differences are the main source of errors when using 8×8 matrices.You can manually use the model with 8x8 grayscale image giving in the repo.
 
-The "app" folder contains the backend application built using the fastapi (python).
+## 🚀 Features
 
-The "classifierModel" folder contains the prediction model and all the hyperparams required for prediction.
+- Input via image upload
+- Real-time digit classification using a trained ML model
+- Clean and interactive frontend interface
+- Backend API handles preprocessing and model inference
+- Fully responsive design
 
-The "images" folder has sample testing images for using as an input to the application (the image are in the form of a list of size 64 i.e 64 elements are present in each image).
+## 🛠️ Tech Stack
 
-The "venv" folder contains the files regarding the virtual environment for the python modules which are used to serve the backend
+### Frontend
+
+- React
+- TailwindCSS / ShadCN UI
+- Axios / Fetch for API requests
+
+### Backend
+
+- Node.js / Express (or FastAPI)
+- Python ML model (Developed from scratch)
+- JSON API for prediction requests
+
+### Database
+
+- Optional (depending on app design, e.g., MongoDB or PostgreSQL)
+
+## 📦 Installation & Setup
+
+git clone https://github.com/your-username/full-digits-detection-app.git
+cd full-digits-detection-app
+
+# client
+
+cd client
+npm install
+
+# Server
+
+python -m venv venv # create virtual environment
+venv\Scripts\activate # Windows
+
+# OR for macOS/Linux: source venv/bin/activate
+
+install fastapi
+
+# To run
+
+cd client # for client
+npm run dev
+
+uvicorn app.main:app --reload # for server
