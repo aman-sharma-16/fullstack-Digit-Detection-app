@@ -1,0 +1,19 @@
+# Overview
+
+The dataset used for the project is from sklearn's "Handwritten Digits Dataset".
+
+The backend is created using the fastapi.
+
+The frontend is built using the vite + react + ts + tailwind.
+
+The images given as input other than sample images must be 8x8 pixel in shape as the predicting model takes only 8x8 sized images,so do remember to resize the image yourself before feeding it to the application.
+
+# Folders' description
+
+The "app" folder contains the backend application built using the fastapi (python).
+
+The "classifierModel" folder contains the prediction model and all the hyperparams required for prediction.
+
+The "images" folder has sample testing images for using as an input to the application (the image are in the form of a list of size 64 i.e 64 elements are present in each image).
+
+The "venv" folder contains the files regarding the virtual environment for the python modules which are used to serve the backend
